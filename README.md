@@ -1,23 +1,10 @@
-# Netflix-Data-Analysis-Project-
 
-
-Here's a README file for your Netflix Movie Data Analysis Project, formatted using Markdown:
 
 # Netflix Movie Data Analysis Project
 
 ## Overview
 
 This project performs an exploratory data analysis on a dataset of Netflix movies. The goal is to uncover insights into movie genres, popularity, and release trends.
-
-## Table of Contents
-
-  - [Project Description](https://www.google.com/search?q=%23project-description)
-  - [Questions Explored](https://www.google.com/search?q=%23questions-explored)
-  - [Dataset](https://www.google.com/search?q=%23dataset)
-  - [Analysis and Visualizations](https://www.google.com/search?q=%23analysis-and-visualizations)
-  - [Key Findings](https://www.google.com/search?q=%23key-findings)
-  - [Tools and Libraries](https://www.google.com/search?q=%23tools-and-libraries)
-  - [How to Run](https://www.google.com/search?q=%23how-to-run)
 
 ## Project Description
 
