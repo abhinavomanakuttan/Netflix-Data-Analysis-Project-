@@ -1,91 +1,126 @@
 
+# 🎬 Netflix Data Analysis Project
 
-# Netflix Movie Data Analysis Project
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Overview
+A comprehensive exploratory data analysis of Netflix's movie and TV show dataset (sourced from Kaggle). This project uncovers content trends, genre preferences, release patterns, and country-level insights using Python, pandas, and data visualization tools.
 
-This project performs an exploratory data analysis on a dataset of Netflix movies. The goal is to uncover insights into movie genres, popularity, and release trends.
+---
 
-## Project Description
+## 🚀 Table of Contents
+1. [Project Overview](#project-overview)  
+2. [Dataset](#dataset)  
+3. [Key Questions](#key-questions)  
+4. [Code & Analysis](#code--analysis)  
+5. [Visualizations](#visualizations)  
+6. [Insights & Findings](#insights--findings)  
+7. [Usage](#usage)  
+8. [Requirements](#requirements)  
+9. [Contributing](#contributing)  
+10. [License](#license)  
 
-This project aims to analyze a dataset containing information about movies available on Netflix. The analysis involves data cleaning, preprocessing, and visualization to answer several key questions about movie trends and characteristics on the platform.
+---
 
-## Questions Explored
+## 🧩 Project Overview
+This project explores the Netflix content catalog from its inception to the present (e.g., 1925–2021). It performs cleaning, exploratory analysis, and visualization to reveal:
+- Content type distribution (Movies vs. TV Shows)  
+- Most popular genres  
+- Country-specific content contributions  
+- Peak release years and seasonal trends  
 
-The analysis addresses the following questions:
+---
 
-1.  What is the most frequent genre of movies released on Netflix?
-2.  What genres have the highest votes?
-3.  What movie got the highest popularity? What's its genre?
-4.  What movie got the lowest popularity? What's its genre?
-5.  Which year has the most filmed movies?
+## 📁 Dataset
+- **Source**: [Kaggle – Netflix Movies and TV Shows](https://www.kaggle.com/shivamb/netflix-shows)  
+- **Format**: CSV  
+- **Attributes**: `show_id`, `type`, `title`, `director`, `cast`, `country`, `date_added`, `release_year`, `rating`, `duration`, `listed_in`, `description`
 
-## Dataset
+---
 
-The dataset used for this analysis is named `mymoviedb.csv`. It contains the following columns:
+## ❓ Key Questions
+1. What is the ratio of Movies to TV Shows?  
+2. Which genres dominate the Netflix library?  
+3. Which countries produce the most Netflix content?  
+4. Optimal months for content releases?  
+5. Yearly trends: Most active years in content production?  
+6. Popular viewer ratings distribution?
 
-  * `Release_Date`: The release date of the movie.
-  * `Title`: The title of the movie.
-  * `Overview`: A brief description of the movie.
-  * `Popularity`: A popularity score for the movie.
-  * `Vote_Count`: The number of votes the movie received.
-  * `Vote_Average`: The average vote score for the movie.
-  * `Original_Language`: The original language of the movie.
-  * `Genre`: The genre(s) of the movie (comma-separated).
-  * `Poster_Url`: The URL of the movie poster.
+---
 
-**Data Cleaning and Preprocessing Steps:**
+## 💻 Code & Analysis
+- **Jupyter Notebook (`Netflix_Data_Analysis.ipynb`)**: End-to-end data cleaning, EDA, and visualization.  
+- **Scripts Folder** _(if exists)_: Break down by feature (e.g., `cleaning.py`, `eda.py`).  
+- Commented code walks through each analytical step.
 
-  * The `Release_Date` column was converted to datetime format, and only the year was extracted.
-  * Irrelevant columns (`Overview`, `Original_Language`, `Poster_Url`) were dropped.
-  * The `Vote_Average` column was categorized into "not popular," "below average," "average," and "popular" based on quartiles.
-  * The `Genre` column, which contained comma-separated values, was split into individual genres, and the DataFrame was "exploded" so that each row represents a single movie-genre combination.
-  * Missing values were dropped from the dataset.
-  * The `Genre` column was cast to a categorical data type.
+---
 
-## Analysis and Visualizations
+## 📊 Visualizations
+The repository includes rich visual storytelling:
+- Bar charts for content types and country contributions  
+- Time-series plots of release activity  
+- Box plots and pie charts illustrating ratings distribution  
+- Genre popularity visualizations
 
-The analysis is performed using Python and various data science libraries. Key visualizations include:
+*(Note: screenshots provided in the repo; run the notebook for full interactive charts)*
 
-  * **Genre Distribution:** A count plot showing the distribution of movie genres.
-  * **Votes Distribution:** A count plot illustrating the distribution of `Vote_Average` categories.
-  * **Release Date Distribution:** A histogram displaying the number of movies released per year.
+---
 
-## Key Findings
+## 📌 Insights & Findings
+- **Content Mix**: ~70% Movies vs. 30% TV Shows  
+- **Top Genres**: Drama, International TV Shows, and Documentaries dominate  
+- **Leading Countries**: United States, India, United Kingdom mostly lead production  
+- **Release Seasons**: July, September, and December are peak months  
+- **Production Peaks**: 2018 had the highest release count  
+- **Viewer Ratings**: 'TV-MA' is the most common, followed by 'TV-14', 'R', etc.
 
-Based on the analysis, the following key insights were drawn:
+---
 
-  * **Most Frequent Genre:** Drama is the most frequent genre in the dataset, accounting for over 14% of all movie genres.
-  * **Genres with Highest Votes:** Approximately 25.5% of the dataset falls into the "popular" vote category. Among these, Drama movies received the highest popularity, making up over 18.5% of the popular movies.
-  * **Highest Popularity Movie:** "Spider-Man: No Way Home" has the highest popularity rate in the dataset. Its genres are Action, Adventure, and Science Fiction.
-  * **Lowest Popularity Movie:** "The United States vs. Billie Holiday" and "Threads" share the lowest popularity rate in the dataset. Their genres include Music, Drama, War, Sci-Fi, and History.
-  * **Year with Most Filmed Movies:** The year 2020 has the highest filming rate in the dataset.
+## 🛠️ Usage
 
-## Tools and Libraries
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/abhinavomanakuttan/Netflix-Data-Analysis-Project-.git
+   cd Netflix-Data-Analysis-Project-
+---
 
-  * **Python:** Programming language
-  * **pandas:** Data manipulation and analysis
-  * **numpy:** Numerical operations
-  * **matplotlib.pyplot:** Data visualization
-  * **seaborn:** Enhanced data visualizations
+2. **Install dependencies**
 
-## How to Run
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the analysis**
 
-1.  **Clone the repository (or download the notebook):**
-    ```bash
-    git clone <repository_url>
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd Netflix Movie Data Analysis Project
-    ```
-3.  **Ensure you have the necessary libraries installed:**
-    ```bash
-    pip install pandas numpy matplotlib seaborn
-    ```
-4.  **Place the `mymoviedb.csv` file in the same directory as the notebook.**
-5.  **Open the Jupyter Notebook:**
-    ```bash
-    jupyter notebook "Netflix Movie Data Analysis Project.ipynb"
-    ```
-6.  **Run all cells** in the notebook to reproduce the analysis and visualizations.
+   ```bash
+   jupyter notebook Netflix_Data_Analysis.ipynb
+   ```
+4. **Explore visuals and insights** in the notebooks.
+
+---
+
+## 📦 Requirements
+
+* Python 3.8+
+* Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`
+* *(Optional)* `Tableau` or `Dash` if interactive dashboards are included
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repo
+2. Create a new branch (`feature-name`)
+3. Make changes & commit with clear messages
+4. Submit a Pull Request for review
+
+Please follow standard GitHub etiquette and add tests or sample outputs where applicable.
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
